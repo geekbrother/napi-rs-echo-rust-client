@@ -7,6 +7,7 @@ This example uses [echo proto file from the Tonic examples](https://github.com/h
 - NodeJS calling in `test.mjs`
 
 ## How to Run
-- yarn
-- yarn build
-- node `test.mjs`
+- `yarn`
+- `yarn build`
+- Start the [echo server](https://github.com/hyperium/tonic/blob/master/examples/src/streaming/server.rs)
+- Run `node test.mjs`
