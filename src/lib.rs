@@ -44,7 +44,7 @@ impl EchoRustClient {
 
   // Sending message to the stream
   #[napi]
-  pub async unsafe fn send(&mut self, message: String) -> napi::Result<()> {
+  pub async fn send(&self, message: String) -> napi::Result<()> {
     if let Err(_) = cclient::send(&self.tx, message).await {
       return Err(Error::from_status(Status::GenericFailure));
     }
